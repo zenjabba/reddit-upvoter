@@ -20,8 +20,8 @@ Automated Reddit upvoting bot with intelligent random timing to help maintain yo
 
 ```bash
 # Clone the repository
-git clone https://gitlab.zenterprise.org/zenjabba/reddit-upvote.git
-cd reddit-upvote
+git clone https://github.com/zenjabba/reddit-upvoter.git
+cd reddit-upvoter
 
 # Create your config
 cp config.yaml.example config/config.yaml
@@ -56,7 +56,7 @@ reddit:
   username: "YOUR_USERNAME"
   password: "YOUR_PASSWORD"
   totp_secret: ""  # For 2FA users - see 2FA Setup below
-  user_agent: "RedditUpvoter/1.0 by u/YOUR_USERNAME"
+  user_agent: "RedditUpvoter/1.0"
 
 timing:
   min_hours: 4          # Minimum hours between upvotes
