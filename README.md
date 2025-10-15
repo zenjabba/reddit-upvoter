@@ -104,7 +104,6 @@ Quick summary:
 
 ## Documentation
 
-- **[SETUP.md](SETUP.md)** - Complete setup guide with all deployment options
 - **[2FA-SETUP.md](2FA-SETUP.md)** - Detailed guide for extracting TOTP secrets from various apps
 
 ## Usage
