@@ -1,0 +1,17 @@
+services:
+  reddit-upvoter:
+    image: zenjabba/reddit-upvoter:latest
+    container_name: reddit-upvoter
+    restart: unless-stopped
+    volumes:
+      # Mount config directory (contains config.yaml and state file)
+      - ./config:/app/config
+      # Mount logs directory (for persistent logs)
+      - ./logs:/app/logs
+    environment:
+      - TZ=UTC  # Set your timezone
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
