@@ -106,26 +106,6 @@ Quick summary:
 
 - **[2FA-SETUP.md](2FA-SETUP.md)** - Detailed guide for extracting TOTP secrets from various apps
 
-## Usage
-
-### Test Configuration
-
-```bash
-python reddit_upvoter.py --test
-```
-
-### Run Once (Single Upvote)
-
-```bash
-python reddit_upvoter.py --once
-```
-
-### Run as Daemon (Continuous)
-
-```bash
-python reddit_upvoter.py --daemon
-```
-
 ### Docker Commands
 
 ```bash
