@@ -1,0 +1,36 @@
+reddit:
+  client_id: "YOUR_CLIENT_ID"
+  client_secret: "YOUR_CLIENT_SECRET"
+  username: "YOUR_USERNAME"
+  password: "YOUR_PASSWORD"
+  totp_secret: ""  # For 2FA users - see 2FA Setup below
+  user_agent: "RedditUpvoter/1.0"
+
+timing:
+  min_hours: 4          # Minimum hours between upvotes
+  max_hours: 12         # Maximum hours between upvotes
+  jitter_minutes: 30    # Random variation (±30 min)
+  time_windows:         # Optional: Only upvote during these hours
+    - start: "08:00"
+      end: "23:00"
+
+behavior:
+  subreddits:
+    - "popular"         # Use r/popular (or specific subreddits)
+  sort_by: "hot"        # hot, new, rising, top
+  consider_top_n: 25    # Select from top N posts
+  min_score: 10         # Minimum post score
+  max_age_hours: 24     # Skip posts older than 24h
+  skip_nsfw: true       # Skip NSFW content
+  skip_already_upvoted: true
+
+logging:
+  log_file: "/app/logs/reddit_upvoter.log"  # For Docker
+  # log_file: "reddit_upvoter.log"          # For local Python
+  log_level: "INFO"
+  log_retention_days: 30
+
+safety:
+  max_retries: 3
+  retry_delay: 60
+  exit_on_auth_failure: true
